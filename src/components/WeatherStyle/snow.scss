@@ -1,0 +1,45 @@
+.fallingSnow span {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: -280px 60px 54px -34px;
+
+    background:url("../../assets/snowflake.jpg");
+
+    -webkit-animation: fallingSnow 12s infinite linear;
+    -moz-animation: fallingSnow 12s infinite linear;
+
+    &:nth-child(5n+5) {
+        -webkit-animation-delay: 1s;
+        -moz-animation-delay: 1s;
+    }
+
+    &:nth-child(3n+2) {
+        -webkit-animation-delay: 1.5s;
+        -moz-animation-delay: 1.5s;
+    }
+    &:nth-child(2n+5) {
+        -webkit-animation-delay: 1.7s;
+        -moz-animation-delay: 1.7s;
+    }
+
+}
+
+        
+@-webkit-keyframes fallingSnow {
+    0% {
+    opacity: 1;
+    
+    -webkit-transform: translate(0, 0px) rotateZ(0deg);
+    }
+    75% {
+    opacity: 1;
+    
+    -webkit-transform: translate(100px, 600px) rotateZ(270deg);
+    }
+    100% {
+    opacity: 0;
+    
+    -webkit-transform: translate(150px, 800px) rotateZ(360deg);
+    }
+}
